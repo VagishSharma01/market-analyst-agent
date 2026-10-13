@@ -1,3 +1,5 @@
+**Live demo:** [market-analyst-agent-smoky.vercel.app](https://market-analyst-agent-smoky.vercel.app)
+
 # Market Analyst Agent
 
 Tool-calling research agent that accepts a market query, decides which tools to run (quote → news → metrics), and returns a structured investment briefing.
