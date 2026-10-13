@@ -1,0 +1,85 @@
+:root {
+  --void: #090d10;
+  --panel: #131921;
+  --mist: #e1e6ef;
+  --muted: #929db0;
+  --line: #29313b;
+  --signal: #53e2cb;
+  --ember: #e5b477;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(83, 226, 203, 0.08), transparent 45%),
+    var(--void);
+  color: var(--mist);
+  line-height: 1.6;
+}
+.shell { width: min(820px, calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 4rem; }
+.kicker {
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--signal);
+}
+h1 { margin: 0.3rem 0 0; font-size: clamp(1.8rem, 4vw, 2.4rem); letter-spacing: -0.03em; }
+.lead { color: var(--muted); max-width: 54ch; }
+.mode { font-family: ui-monospace, monospace; font-size: 12px; color: var(--ember); }
+form, .panel {
+  margin-top: 1.25rem;
+  padding: 1.1rem 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--panel);
+}
+label { display: block; font-size: 0.9rem; margin-bottom: 0.4rem; color: var(--muted); }
+textarea {
+  width: 100%;
+  resize: vertical;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #0c1014;
+  color: var(--mist);
+  padding: 0.75rem;
+  font: inherit;
+}
+button {
+  margin-top: 0.75rem;
+  border: 1px solid var(--signal);
+  background: var(--signal);
+  color: #06241d;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+}
+button:disabled { opacity: 0.6; cursor: wait; }
+.status { margin-top: 1rem; color: var(--ember); font-family: ui-monospace, monospace; font-size: 13px; }
+.hidden { display: none; }
+h2 { margin: 0 0 0.75rem; font-size: 1.1rem; }
+ol { margin: 0; padding-left: 1.2rem; color: var(--muted); }
+li + li { margin-top: 0.65rem; }
+li strong { color: var(--mist); }
+li code { color: var(--signal); font-size: 0.85em; }
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: ui-monospace, monospace;
+  font-size: 13px;
+  color: #c7d0de;
+}
+footer {
+  margin-top: 2rem;
+  font-family: ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+footer a { color: var(--signal); text-decoration: none; }

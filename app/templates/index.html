@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Market Analyst Agent</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <p class="kicker">Agentic AI · Tool calling · ReAct</p>
+      <h1>Market Analyst Agent</h1>
+      <p class="lead">Ask about a ticker. The agent decides which tools to call, then writes a structured briefing.</p>
+      <p class="mode">Runtime mode: <strong>{{ mode }}</strong></p>
+    </header>
+
+    <form id="form">
+      <label for="query">Research query</label>
+      <textarea id="query" rows="3" placeholder="Analyze NVDA — price, recent headlines, and short-term return stats">Analyze AAPL for a quick investment briefing</textarea>
+      <button type="submit" id="btn">Run agent</button>
+    </form>
+
+    <section id="status" class="status hidden"></section>
+
+    <section id="steps" class="panel hidden">
+      <h2>Tool trace</h2>
+      <ol id="step-list"></ol>
+    </section>
+
+    <section id="report" class="panel hidden">
+      <h2>Report</h2>
+      <pre id="report-body"></pre>
+    </section>
+
+    <footer>
+      <span>Not financial advice · <a href="https://github.com/VagishSharma01/market-analyst-agent">GitHub</a></span>
+    </footer>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

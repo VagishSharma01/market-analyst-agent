@@ -1,0 +1,1 @@
+"""Market Analyst Agent — tool-calling research agent."""
